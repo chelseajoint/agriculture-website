@@ -1,0 +1,17 @@
+@mixin baseFontStyle {
+  font-family: $bodyFontFamily;
+  font-style: $baseFontStyle;
+  font-weight: $baseFontWeight;
+}
+
+@mixin boldBaseFontStyle {
+  font-family: $bodyFontFamily;
+  font-style: $baseFontStyle;
+  font-weight: $font-weight-7;
+}
+
+@mixin titleFontStyle {
+  font-family: $titleFontFamily;
+  font-style: $baseFontStyle;
+  font-weight: $font-weight-7;
+}
