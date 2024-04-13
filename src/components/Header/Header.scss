@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.header {
+    width: 1600px;
+    height: 204px;
+    @include titleFontStyle;
+    color: $green-dark;
+    @include flexCenter;
+
+    .logo {
+        @include flexCenter;
+
+        img {
+            width: 36px;
+            height: 54px;
+            margin-right: $spacing-1;
+        }
+
+        .name {
+            font-size: $font-size-38;
+        }
+    }
+
+    .nav {
+        ul {
+            @include flexCenter;
+            margin-left: $spacing-12;
+            
+            li {
+                list-style: none;
+                margin-right: $spacing-4;
+            }
+
+            a {
+                text-decoration: none;
+                color: $green-dark;
+            }
+
+            .display-none {
+                display: none;
+            }
+        }
+    }
+
+    .search {
+        input {
+            width: 376px;
+            height: 66px;
+            border-radius: $radius-18;
+            background-color: $gray-light;
+            border: none;
+        }
+    }
+
+    .cart {
+        width: auto;
+        height: 66px;
+        border-radius: $radius-18;
+        border: 1px solid $gray-neutral;
+    }
+}

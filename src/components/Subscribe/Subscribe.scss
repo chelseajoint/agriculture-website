@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.subscribe {
+    width: $width-base;
+    height: 323px;
+    border-radius: $radius-15;
+    background-color: $blue;
+    background-image: url('../../assets/Subscribe/background.png');
+}
