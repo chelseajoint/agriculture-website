@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+
+.icon {
+  &.visible {
+    display: inline;
+    width: $width-1;
+    height: $height-1;
+    margin-left: calc($spacing-4 + 2px);
+    margin-bottom: -$spacing-base;
+    fill: none;
+  }
+
+  .circle {
+    fill: $green-pale;
+  }
+
+  .arrow {
+    stroke: $white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}

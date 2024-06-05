@@ -1,5 +1,5 @@
 /* Border-radius */
-$radius-base: 1px;
+$radius-base: 2px;
 
 $radius-1: calc(1 * $radius-base);
 $radius-2: calc(2 * $radius-base);
@@ -13,7 +13,9 @@ $radius-9: calc(9 * $radius-base);
 $radius-10: calc(10 * $radius-base);
 $radius-11: calc(11 * $radius-base);
 $radius-12: calc(12 * $radius-base);
+$radius-13: calc(13 * $radius-base);
+$radius-14: calc(14 * $radius-base);
+$radius-15: calc(15 * $radius-base);
+$radius-18: calc(18 * $radius-base);
 
-// $baseBorderRadius: $radius-12;
-
-// $border: 1px solid $gray-400;
+$border: 1px solid $green-dark;
