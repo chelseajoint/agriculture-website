@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 * {
   margin: 0;
@@ -10,8 +10,14 @@
   scrollbar-width: thin;
 }
 
-body, p {
+body,
+p,
+ol li {
   @include baseFontStyle;
+}
+
+ol li::marker {
+  @include boldBaseFontStyleBold;
 }
 
 html,
@@ -20,7 +26,12 @@ body,
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @include titleFontStyle;
 }
 
@@ -30,6 +41,7 @@ h1 {
 
 h2 {
   font-size: $font-size-50;
+  line-height: $line-height-60;
 }
 
 h3 {
@@ -48,6 +60,10 @@ h6 {
   font-size: $font-size-29;
 }
 
-p {
-  font-size: $font-size-18;
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
 }

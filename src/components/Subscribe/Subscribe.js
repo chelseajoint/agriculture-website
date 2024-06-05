@@ -1,18 +1,17 @@
-import React from 'react';
-import Button from '../Button/Button';
+import React from "react";
+import Form from "../Form";
 
-import './Subscribe.scss';
+import "./Subscribe.scss";
 
 const Subscribe = () => {
-    return (
-        <section className='section'>
-            <h2>Subscribe to <br/> our Newsletter</h2>
-            <form>
-                <input placeholder="Your Email Address" />
-                <Button style='pagination' text='Subscribe' type='submit'/>
-            </form>
-        </section>
-    )
-}
+  return (
+    <section className="subscribe">
+      <h2>
+        Subscribe to <br /> our Newsletter
+      </h2>
+      <Form placeholder="Your Email Address" style="pagination" text="Subscribe" type="submit" />
+    </section>
+  );
+};
 
 export default Subscribe;

@@ -1,61 +1,147 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
+
+.header,
+.navigation,
+.search-cart {
+  @include flexCenter;
+}
 
 .header {
-    width: 1600px;
-    height: 204px;
-    @include titleFontStyle;
-    color: $green-dark;
+  width: $width-80;
+  height: $height-10;
+  @include titleFontStyle;
+  justify-content: space-between;
+
+  .logo {
     @include flexCenter;
 
-    .logo {
-        @include flexCenter;
-
-        img {
-            width: 36px;
-            height: 54px;
-            margin-right: $spacing-1;
-        }
-
-        .name {
-            font-size: $font-size-38;
-        }
+    img {
+      width: calc($width-2 - 4px);
+      height: calc($height-3 - 6px);
+      margin-right: $spacing-16;
     }
 
-    .nav {
-        ul {
-            @include flexCenter;
-            margin-left: $spacing-12;
-            
-            li {
-                list-style: none;
-                margin-right: $spacing-4;
-            }
+    .brand {
+      font-size: $font-size-38;
+    }
+  }
 
-            a {
-                text-decoration: none;
-                color: $green-dark;
-            }
+  .menu {
+    ul:not(.pages-menu) {
+      @include flexCenter;
+      margin-left: $spacing-48;
 
-            .display-none {
-                display: none;
-            }
+      li:not(.pages-menu li) {
+        margin-right: $spacing-16;
+      }
+    }
+
+    ul {
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: $green-dark;
+      }
+
+      .pages {
+        cursor: pointer;
+      }
+    }
+
+    .pages-menu {
+      position: absolute;
+    }
+  }
+
+  .search input,
+  .cart {
+    height: calc($height-3 + 6px);
+    border-radius: $radius-18;
+  }
+
+  .search form,
+  .cart {
+    position: relative;
+
+    .button.search,
+    .button.button-cart {
+      position: absolute;
+      cursor: pointer;
+      background: transparent;
+      width: calc($width-3 - 3px);
+      height: calc($height-3 - 4px);
+    }
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .search {
+    form {
+      input {
+        width: $width-19;
+        background-color: $gray-light;
+        border: none;
+      }
+
+      .button.search {
+        top: calc($spacing-3 - 1px);
+        right: calc($spacing-3 - 1px);
+        border: none;
+
+        .icon {
+          circle {
+            fill: $green;
+          }
+
+          path {
+            fill: $white;
+          }
         }
+      }
+    }
+  }
+
+  .cart {
+    width: $width-8;
+    margin-left: $spacing-10;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border: $border;
+    border-color: $gray-neutral;
+
+    .cart-items {
+      margin-right: $spacing-8;
     }
 
-    .search {
-        input {
-            width: 376px;
-            height: 66px;
-            border-radius: $radius-18;
-            background-color: $gray-light;
-            border: none;
+    .button.button-cart {
+      top: calc($spacing-3 - 2px);
+      left: calc($spacing-3 - 2px);
+      border: none;
+
+      .icon {
+        circle {
+          fill: $green-dark;
         }
-    }
 
-    .cart {
-        width: auto;
-        height: 66px;
-        border-radius: $radius-18;
-        border: 1px solid $gray-neutral;
+        path {
+          fill: none;
+          stroke: $white;
+          stroke-width: 2.2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .wheels {
+          fill: $white;
+        }
+      }
     }
+  }
 }
