@@ -1,12 +1,17 @@
 import React from "react";
 import Button from "../Button";
-
 import "./DefaultButton.scss";
 
-const DefaultButton = ({ style, text, type }) => {
+interface DefaultButtonProps {
+  buttonStyle?: string;
+  text: string;
+  type: "button" | "submit" | "reset";
+}
+
+const DefaultButton: React.FC<DefaultButtonProps> = ({ buttonStyle, text, type }) => {
   return (
     <Button
-      style={style}
+      buttonStyle={buttonStyle}
       text={text}
       type={type}
       icon={

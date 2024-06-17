@@ -4,21 +4,17 @@ import Logo from "../../assets/Logo.png";
 import Button from "../Button";
 import "./Header.scss";
 
-const Header = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [cartItems, setCartItems] = useState([]);
-  const [isPagesMenuOpen, setIsPagesMenuOpen] = useState(false);
-  
-  const handleSearchChange = (event) => {
+const Header: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [cartItems, setCartItems] = useState<string[]>([]);
+  const [isPagesMenuOpen, setIsPagesMenuOpen] = useState<boolean>(false);
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
 
-  const handleAddToCart = (item) => {
-    setCartItems((prevCartItems) => [...prevCartItems, item]);
-  };
-
   const togglePagesMenu = () => {
-    setIsPagesMenuOpen((prevIsPagesMenuOpen) => !prevIsPagesMenuOpen);
+    setIsPagesMenuOpen(!isPagesMenuOpen);
   };
 
   return (
@@ -40,7 +36,11 @@ const Header = () => {
               <a className="pages" onClick={togglePagesMenu}>
                 Pages
               </a>
-              <ul className={`pages-menu ${isPagesMenuOpen ? "display-block" : "display-none"}`}>
+              <ul
+                className={`pages-menu ${
+                  isPagesMenuOpen ? "display-block" : "display-none"
+                }`}
+              >
                 <li>
                   <a href="/page1">Page 1</a>
                 </li>
@@ -65,10 +65,13 @@ const Header = () => {
         <div className="search">
           <Form
             inputType="text"
+            placeholder="Search"
             value={searchQuery}
             onChange={handleSearchChange}
-            style="search"
-            icon={
+            buttonText=""
+            buttonStyle="button-search"
+            buttonType="submit"
+            buttonIcon={
               <svg
                 className="icon"
                 viewBox="0 0 56 57"
@@ -82,7 +85,9 @@ const Header = () => {
         </div>
         <div className="cart">
           <Button
-            style="button-cart"
+            text=""
+            type="button"
+            buttonStyle="button-cart"
             icon={
               <svg
                 className="icon"
