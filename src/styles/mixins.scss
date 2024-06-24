@@ -2,11 +2,18 @@
   font-family: $bodyFontFamily;
   font-style: $baseFontStyle;
   font-weight: $baseFontWeight;
+  font-size: $baseFontSize;
+  line-height: $baseFontLineHeight;
+  color: $gray-dark;
 }
 
-@mixin boldBaseFontStyle {
-  font-family: $bodyFontFamily;
-  font-style: $baseFontStyle;
+@mixin baseFontStyleItalic {
+  @include baseFontStyle;
+  font-style: italic;
+}
+
+@mixin boldBaseFontStyleBold {
+  @include baseFontStyle;
   font-weight: $font-weight-7;
 }
 
@@ -14,4 +21,10 @@
   font-family: $titleFontFamily;
   font-style: $baseFontStyle;
   font-weight: $font-weight-7;
+  color: $green-dark;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+
+.subscribe {
+  width: $width-70;
+  height: $height-16;
+  padding: $spacing-40;
+  border-radius: $radius-15;
+  background-color: $blue;
+  background-image: url("../../assets/Subscribe/background.png");
+  background-size: $width-104 $height-37;
+  background-position-x: -$width-19;
+  background-position-y: -$height-17;
+  background-repeat: no-repeat;
+  @include flexCenter;
+  justify-content: space-between;
+
+  h2 {
+    color: $white;
+  }
+}

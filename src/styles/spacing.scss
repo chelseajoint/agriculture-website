@@ -1,5 +1,5 @@
 /* Spacing */
-$spacing-base: 8px;
+$spacing-base: 2px;
 
 $spacing-1: calc(1 * $spacing-base);
 $spacing-2: calc(2 * $spacing-base);
@@ -11,3 +11,48 @@ $spacing-7: calc(7 * $spacing-base);
 $spacing-8: calc(8 * $spacing-base);
 $spacing-9: calc(9 * $spacing-base);
 $spacing-10: calc(10 * $spacing-base);
+$spacing-11: calc(11 * $spacing-base);
+$spacing-12: calc(12 * $spacing-base);
+$spacing-16: calc(16 * $spacing-base);
+$spacing-40: calc(40 * $spacing-base);
+$spacing-48: calc(48 * $spacing-base);
+
+/* Width */
+$width-base: 20px;
+
+$width-1: calc(1 * $width-base);
+$width-2: calc(2 * $width-base);
+$width-3: calc(3 * $width-base);
+$width-4: calc(4 * $width-base);
+$width-5: calc(5 * $width-base);
+$width-6: calc(6 * $width-base);
+$width-7: calc(7 * $width-base);
+$width-8: calc(8 * $width-base);
+$width-9: calc(9 * $width-base);
+$width-10: calc(10 * $width-base);
+$width-11: calc(11 * $width-base);
+$width-12: calc(12 * $width-base);
+$width-17: calc(17 * $width-base);
+$width-19: calc(19 * $width-base);
+$width-70: calc(70 * $width-base);
+$width-80: calc(80 * $width-base);
+$width-104: calc(104 * $width-base);
+
+/* Height */
+$height-base: 20px;
+
+$height-1: calc(1 * $height-base);
+$height-2: calc(2 * $height-base);
+$height-3: calc(3 * $height-base);
+$height-4: calc(4 * $height-base);
+$height-5: calc(5 * $height-base);
+$height-6: calc(6 * $height-base);
+$height-7: calc(7 * $height-base);
+$height-8: calc(8 * $height-base);
+$height-9: calc(9 * $height-base);
+$height-10: calc(10 * $height-base);
+$height-11: calc(11 * $height-base);
+$height-12: calc(12 * $height-base);
+$height-16: calc(16 * $height-base);
+$height-17: calc(17 * $height-base);
+$height-37: calc(37 * $height-base);
