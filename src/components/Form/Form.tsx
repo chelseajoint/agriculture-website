@@ -6,8 +6,8 @@ import "./Form.scss";
 interface FormProps {
   inputType: string;
   placeholder: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   buttonStyle?: string;
   buttonText: string;
   buttonType: "button" | "submit" | "reset";
