@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import DefaultButton from "../components/DefaultButton";
-import Subscribe from "../components/Subscribe";
+import OfferBanner from "../components/OfferBanner";
 
 import "./App.scss";
 
@@ -9,10 +8,25 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <Header />
-      <DefaultButton text="text" type="button" />
-      <DefaultButton buttonStyle="yellow" text="text" type="button" />
-      <DefaultButton buttonStyle="white" text="text" type="button" />
-      <Subscribe />
+      <OfferBanner
+        title="Natural!!"
+        titleStyle="white"
+        offer={
+          <>
+            Get Garden <br /> Fresh Fruits
+          </>
+        }
+        imgName="freshFruits"
+      ></OfferBanner>
+      <OfferBanner
+        title="Offer!!"
+        offer={
+          <>
+            Get 10% off <br /> on Vegetables
+          </>
+        }
+        imgName="vegetables"
+      ></OfferBanner>
     </div>
   );
 };

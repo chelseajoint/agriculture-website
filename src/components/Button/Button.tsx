@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({ buttonStyle, text, type, icon }) => {
   };
 
   return (
-    <button className={`button ${buttonStyle || ""}`} onClick={handleClick} type={type}>
+    <button className={`button ${buttonStyle}`} onClick={handleClick} type={type}>
       {text}
       {icon && <span className="button-icon">{icon}</span>}
     </button>
